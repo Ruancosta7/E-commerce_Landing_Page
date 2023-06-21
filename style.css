@@ -606,8 +606,8 @@ button:active {
 }
 
 .products-img>a:active {
-    transform: scale(.6);
-    transition: 200ms;
+    transform: scale(.8);
+    transition: .2s;
 }
 
 @keyframes right-left {
