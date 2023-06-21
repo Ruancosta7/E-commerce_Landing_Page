@@ -1,0 +1,1108 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #212121;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    display: grid;
+    height: 100vh;
+}
+
+/* img {
+    height: 50px;
+} */
+
+button {
+    border: none;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 4;
+}
+
+header #menu {
+    animation: right-left 1s ease-in-out, ;
+    height: 35px;
+    margin-right: 10px;
+}
+
+/* header .logo{
+    position: fixed;
+    z-index: 1;
+} */
+
+.menu-rotate {
+    animation: rotate .6s forwards;
+}
+
+.visibility2 {
+    visibility: hidden;
+}
+
+.visibility3 {
+    opacity: .2;
+}
+
+header>#menu>img {
+    height: 35px;
+}
+
+header a img {
+    height: 20px;
+}
+
+.logo {
+    animation: menu 1s ease-in-out;
+}
+
+.nav-menu {
+    position: fixed;
+    width: 100%;
+    transition: 500ms;
+    background-color: #f59f1da2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 100%;
+    z-index: 3;
+    height: 100%;
+
+}
+
+.nav-menu a {
+    margin: 10px 0px;
+    font-size: 27px;
+    animation: menu 1s ease;
+    text-align: center;
+    font-weight: 500;
+}
+
+.visibility {
+    display: none;
+}
+
+.cart {
+    position: fixed;
+    justify-self: flex-end;
+    display: flex;
+    align-self: flex-end;
+    right: 15px;
+    bottom: 10px;
+    z-index: 2;
+    visibility: hidden;
+    transition: 600ms;
+    animation: growing2 1s 2s forwards;
+}
+
+.cart>a {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #f59f1dd0;
+}
+
+.cart img {
+    filter: invert(1);
+    height: 40px;
+}
+
+main {
+    height: 700px;
+    background: url(assets/arrival-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main>p {
+    animation: growing 1s ease;
+    font-size: 20px;
+}
+
+main>h3 {
+    animation: growing 1s ease;
+    font-size: 32px;
+}
+
+main>button {
+    animation: growing 1s ease;
+    font-weight: 500;
+    border-radius: 6px;
+    margin-top: 5px;
+    font-size: 16px;
+    height: 40px;
+    width: 120px;
+    background-color: #f59e1d;
+}
+
+.products-img {
+    background-color: #d1d1d1;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px;
+}
+
+.products-img a {
+    height: 60px;
+    width: 60px;
+    margin: 0px 10px;
+}
+
+.products-img img {
+    height: 60px;
+    animation: growing 1s ease-in-out;
+}
+
+.arrivals {
+    display: flex;
+    flex-direction: column;
+    /* grid-template-areas: 
+    "h3 h3"
+    "nav nav"
+    "arrivals-img arrivals-img"
+    ; */
+}
+
+.arrivals h3 {
+    flex-basis: 100%;
+    align-self: center;
+    justify-self: center;
+    /* align-self: center;
+    justify-self: center;
+    grid-area: h3; */
+    padding: 5px 0px;
+}
+
+.arrivals nav {
+    flex-basis: 100%;
+    align-self: center;
+    /* grid-area: nav; */
+}
+
+.arrivals>nav>a {
+    margin: 0px 5px;
+}
+
+.arrivals-img {
+    display: flex;
+    /* grid-area: arrivals-img; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* display: grid;
+
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: auto 180px 180px;
+    grid-template-areas: 
+    "img1 img1"
+    "img2 img3"
+    "img4 img5"
+    ; */
+}
+
+.arrivals-img>.img1 {
+    display: flex;
+    flex-basis: 100%;
+    height: auto;
+    width: 10em;
+    /* justify-self: center;
+    width: 100%;
+    height: 100%;
+    grid-area: img1; */
+}
+
+.arrivals-img>.img2 {
+    flex-basis: 50%;
+    height: auto;
+    width: 10em;
+    /* justify-self: center;
+    width: 100%;
+    height: 100%;
+    grid-area: img2; */
+}
+
+.arrivals-img>.img3 {
+    flex-basis: 50%;
+    height: auto;
+    width: 10em;
+    /* justify-self: center;
+    width: 100%;
+    height: 100%;
+    grid-area: img3; */
+}
+
+.arrivals-img>.img4 {
+    flex-basis: 50%;
+    justify-self: center;
+    height: auto;
+    width: 10em;
+}
+
+.arrivals-img>.img5 {
+    flex-basis: 50%;
+    justify-self: center;
+    height: auto;
+    width: 10em;
+}
+
+.sale {
+    height: 30vh;
+    background-image: url(assets/banner-bg-1.jpg);
+    background-repeat: round;
+    display: grid;
+    grid-template-areas:
+        "h4 h4"
+        "h3 h3"
+        "sale-time sale-time"
+        "button-sale button-sale"
+    ;
+}
+
+.sale h4 {
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    justify-self: center;
+    grid-area: h4;
+    font-weight: 500;
+    align-self: center;
+}
+
+.sale h3 {
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    justify-self: center;
+    grid-area: h3;
+}
+
+.sale-time {
+    justify-content: space-evenly;
+    display: flex;
+    grid-area: sale-time;
+}
+
+.sale-time-p {
+    font-family: "Poppins", sans-serif;
+    padding: 5px;
+    border-radius: 4px;
+    width: 55px;
+    height: 40px;
+    align-content: center;
+    text-align: center;
+    background-color: #f59e1d;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.sale>button {
+    height: 30px;
+    background-color: #f59e1d;
+    border-radius: 5px;
+    border: none;
+    justify-self: center;
+    align-self: center;
+    grid-area: button-sale;
+    font-weight: 600;
+    width: 100px;
+}
+
+.best-seller {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.best-seller h3 {
+    padding: 10px 0px;
+    text-align: center;
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+
+.best-seller>div>div>p>span {
+    font-style: italic;
+    text-decoration: line-through;
+}
+
+.char {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.char-p {
+    color: #fbbf24;
+}
+
+span {
+    color: black;
+}
+
+.best-seller>.char1>img {
+    height: auto;
+    width: 150px;
+}
+
+.char-text-background {
+    margin-top: 5px;
+    text-align: center;
+    background-color: #f0f0f0;
+    width: 150px;
+}
+
+.char-img {
+    align-self: center;
+    height: auto;
+    width: 150px;
+}
+
+/* .img-work {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 20vh;
+    background-image: url(assets/banner-bg-2.jpg);
+    background-repeat: round;
+    background-size: cover;
+    opacity: .9;
+} */
+.img-work {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: static;
+}
+
+.img-work>img {
+    opacity: .9;
+    position: absolute;
+    height: 20vh;
+    width: 100%;
+}
+
+.img-work h4 {
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
+    font-size: 20px;
+}
+
+.img-work h2 {
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
+    font-size: 30px;
+}
+
+.special-product {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.special-product h3 {
+    align-self: center;
+    flex-basis: 100%;
+}
+
+.special-product-img {
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    flex-basis: 100%;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.special-product-img>.product1 {
+    height: auto;
+    width: 200px;
+    flex-basis: 100%;
+}
+
+.special-product-img>.product2 {
+    height: auto;
+    width: 30%;
+}
+
+.special-product-img>.product3 {
+    height: auto;
+    width: 30%;
+}
+
+.special-product-img>.product4 {
+    height: auto;
+    width: 30%;
+}
+
+.blogs {
+    align-items: center;
+    padding: 0px 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-suistable-furniture {
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    width: 276px;
+    align-self: center;
+}
+
+.blog-suistable-furniture img {
+    display: flex;
+    align-self: center;
+    width: 276px;
+    border-radius: 10px 10px 0px 0px;
+    height: 200px;
+}
+
+.blog-furniture-care {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 276px;
+    align-self: center;
+}
+
+.blog-furniture-care img {
+    display: flex;
+    align-self: center;
+    width: 276px;
+    border-radius: 10px 10px 0px 0px;
+    height: 200px;
+}
+
+.blog-design-tips {
+    display: flex;
+    flex-direction: column;
+    width: 276px;
+    align-self: center;
+}
+
+.blog-design-tips img {
+    display: flex;
+    align-self: center;
+    width: 276px;
+    border-radius: 10px 10px 0px 0px;
+    height: 200px;
+}
+
+.end-page {
+    margin-top: 10px;
+    background-color: #dddddd;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.adress img {
+    margin-top: 2px;
+    height: 25px;
+}
+
+.adress {
+    height: 25vh;
+    font-weight: 500;
+    margin-left: 10px;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.adress p {
+    padding: 0px 1px;
+}
+
+.adress>a>img {
+
+    height: 15px;
+}
+
+.adress>a {
+    padding: 5px 0px;
+    height: 15px;
+    width: 97px;
+}
+
+.information {
+    margin-left: 10px;
+    align-self: center;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.information a {
+    padding: 5px 0px;
+}
+
+.account {
+    margin-left: 10px;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.account a {
+    width: 30%;
+    padding: 5px 0px;
+}
+
+.footer {
+    padding: 2px 0px;
+    border: #dddddd;
+    text-align: center;
+    background-color: #dddddd;
+}
+
+
+
+
+
+/*---------------------------------------------ANIMAÇÕES--------------------------------------------- */
+button:active {
+    transform: scale(.7);
+    transition: 400ms;
+}
+
+.cart:active {
+    transform: scale(.6);
+    transition: 400ms;
+}
+
+.products-img>a:active {
+    transform: scale(.6);
+    transition: 200ms;
+}
+
+@keyframes right-left {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-90deg);
+    }
+}
+
+@keyframes menu {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+}
+
+@keyframes growing2 {
+    0% {
+        transform: scale(.5);
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@keyframes growing {
+    0% {
+        transform: scale(.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes rotate2 {
+    0% {
+        transform: rotate(-90deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@media (min-width:767px) {
+    header {
+        height: 50px;
+    }
+
+    header .logo img {
+        height: 40px;
+    }
+
+    header .logo {
+        height: 40px;
+    }
+
+    header #menu {
+        height: 50px;
+    }
+
+    header #menu img {
+        height: 50px;
+    }
+
+    main>p {
+        font-size: 24px;
+    }
+
+    main>h3 {
+        font-size: 48px;
+    }
+
+    main>button {
+        height: 50px;
+        width: 200px;
+        font-size: 30px;
+        border-radius: 15px;
+    }
+
+    .nav-menu a {
+        font-size: 40px;
+    }
+
+    .cart a {
+        height: 65px;
+        width: 65px;
+    }
+
+    .cart img {
+        height: 65px;
+        width: 65px;
+    }
+
+    .products-img {
+        height: 100px;
+        justify-content: space-evenly;
+    }
+
+    .products-img>a {
+        height: 60px;
+        width: 60px;
+    }
+
+    .products-img>img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .arrivals>h3 {
+        font-size: 30px;
+    }
+
+    .arrivals>nav>a {
+        text-align: center;
+        font-size: 25px;
+        margin: 0px 15px;
+    }
+
+    .sale {
+        background-image: url(assets/banner-bg-1.jpg);
+        background-repeat: round;
+        background-size: cover;
+        height: 50vh;
+    }
+
+    .sale h4 {
+        font-size: 40px;
+    }
+
+    .sale h3 {
+        font-size: 64px;
+    }
+
+    .sale p {
+        font-size: 20px;
+        width: 80px;
+        height: 65px;
+    }
+
+    .sale button {
+        margin: 0px;
+        justify-self: center;
+        height: 60px;
+        width: 150px;
+        font-size: 22px;
+    }
+
+    .best-seller h3 {
+        font-size: 40px;
+    }
+
+    .char {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-basis: 50%;
+        margin-bottom: 20px;
+    }
+
+    .char-img {
+        height: 220px;
+        width: 220px;
+    }
+
+    .char-text-background {
+        width: 220px;
+    }
+
+    .char p {
+        font-size: 23px;
+    }
+
+    .img-work {
+        height: 32vh;
+    }
+
+    .img-work img {
+        height: 32vh;
+    }
+
+    .img-work h4 {
+        font-size: 30px;
+    }
+
+    .img-work h2 {
+        font-size: 50px;
+    }
+
+    .special-product h3 {
+        margin-top: 2px;
+        padding: 5px;
+        font-size: 35px;
+    }
+
+    .special-product-img {
+        padding: 0px 10px;
+    }
+
+    .special-product>.special-product-img>.product1 {
+        height: auto;
+        width: 100px;
+    }
+
+    .blogs {
+        padding: 0px;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .blogs h3 {
+        font-size: 40px;
+    }
+
+    .blog-suistable-furniture {
+        width: 320px;
+    }
+
+    .blog-suistable-furniture img {
+        width: 320px;
+    }
+
+    .blog-suistable-furniture h4 {
+        font-size: 23px;
+        text-align: center;
+    }
+
+    .blog-suistable-furniture p {
+        /* padding: 0px 35px; */
+        font-size: 21px;
+    }
+
+    .blog-furniture-care {
+        width: 320px;
+    }
+
+    .blog-furniture-care img {
+        width: 320px;
+    }
+
+    .blog-furniture-care {
+        padding: 0px;
+    }
+
+    .blog-furniture-care h4 {
+        font-size: 23px;
+        text-align: center;
+    }
+
+    .blog-furniture-care p {
+        font-size: 21px;
+    }
+
+    .blog-design-tips {
+        width: 320px;
+    }
+
+    .blog-design-tips img {
+        width: 320px;
+    }
+
+    .blog-design-tips h4 {
+        font-size: 23px;
+        text-align: center;
+    }
+
+    .blog-design-tips p {
+        font-size: 21px;
+    }
+
+    .end-page {
+        font-size: 30px;
+    }
+
+    .adress>a>img {
+        height: 30px;
+
+    }
+
+    .adress>a {
+        height: 30px;
+
+    }
+
+    .adress {
+        height: 30vh;
+    }
+}
+
+
+@media (min-width:1023px) {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    header {
+        display: flex;
+        position: static;
+    }
+
+    header .logo img {
+        z-index: 5;
+        align-self: center;
+        height: 30px;
+    }
+
+    header .logo {
+        z-index: 5;
+        align-self: center;
+        height: 30px;
+    }
+
+    header #menu {
+        display: none;
+    }
+
+    header a #menu {
+        display: none;
+    }
+
+    .nav-menu {
+        z-index: 4;
+        position: absolute;
+        display: flex;
+        height: 50px;
+        flex-direction: row;
+        background-color: #ffffff00;
+        justify-content: flex-end;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* .nav-menu{
+        flex-basis: 70%;
+    } */
+    .nav-menu a {
+        margin: 0px 10px;
+        font-size: 20px;
+    }
+
+    main p {
+        font-size: 48px;
+    }
+
+    main h3 {
+        font-size: 80px;
+    }
+
+    .visibility3 {
+        opacity: 1;
+    }
+
+    .sale {
+        background-image: url(assets/banner-bg-1.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 70vh;
+
+    }
+
+    .sale h4 {
+        font-size: 4em;
+    }
+
+    .sale h3 {
+        font-size: 9em;
+    }
+
+    .char {
+        flex-basis: 25%;
+        margin-top: 5px;
+    }
+    .img-work{
+        height: 55vh;
+    }
+    .img-work>img {
+        opacity: .9;
+        position: absolute;
+        height: 50vh;
+        width: 100%;
+    }
+    .blogs{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .blogs h3{
+        flex-basis: 100%;
+        text-align: center;
+        padding: 10px 0px;
+
+    }
+    .blog-suistable-furniture h4{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 65px;
+        font-size: 21px;
+    }
+    .blog-furniture-care h4{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 65px;
+        font-size: 21px;
+    }
+    .blog-design-tips h4{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 65px;
+        font-size: 21px;
+    }
+    .end-page{
+        font-size: 25px;
+        flex-direction: row;
+        display: flex;
+        justify-content: space-around;
+        
+    }
+    .adress{
+        width: 600px;
+        align-self: center;
+        font-size: 20px;
+        flex-direction: column;
+        flex-basis: auto;
+        align-content: flex-end;
+    }
+    .adress > img{
+        height: 15px;
+    }
+    .information{
+        height: 100%;
+        flex-basis: auto;
+        display: flex;
+        justify-content: space-around;
+    }
+    .account{
+        height: 100%;
+        align-self: center;
+        flex-basis: auto;
+        justify-content: space-around;
+        width: 150px;
+    }
+    .account a {
+        width: auto;
+        padding: 5px 0px;
+    }
+
+    .nav-animation {
+        animation: border 1s;
+    }
+
+    #nav a:hover {
+        border-bottom: 1px solid black;
+        transition: 300ms;
+    }
+    #nav-arrivals{
+        padding: 10px 0px;
+    }
+    #nav-arrivals a:hover{
+        border-bottom: 1px solid black;
+        transition: 300ms;
+        
+    }
+    nav a:active{
+        transform: scale(.7);
+        transform: 300ms;
+    }
+    button:hover{
+        background-color: #fbbf24;
+    }
+    .cart a:active{
+        transform: scale(.7);
+        transition: 300ms;
+    }
+
+}
